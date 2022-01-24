@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block title %}Predicción del tiempo{% endblock %}
+{% block stylesheets %}
+   {{ parent() }}
+    <script type="text/javascript" src="{{ asset('js/city_finder.js') }}"></script>
+{% endblock %}
+{% block body %}
+    <div class="city_finder" style="padding:350px 600px 250px 600px">
+        <h5>Introduce una ciudad para buscar la predicción meteorológica</h5>
+
+        <label for="city_finder">Ciudad</label>
+        <input type="text" name="city_finder" id="city_finder" class="form-control" autofocus>
+        <br>
+        <br>
+        <a href="https://www.weatherapi.com/" title="Free Weather API"><img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" style="border:none"></a>
+    </div>
+
+{% endblock %}
